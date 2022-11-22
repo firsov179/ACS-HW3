@@ -14,10 +14,10 @@ void print(const double *x, const double *res) {
 
 void getAns(double x, double *res) {
     int k = (int)(x / (2 * M_PI));                        // Приводим к значению от 0 до 2 * Pi
-    if (k > 0) {
+    if (k >= 0) {
         x = x - 2 * M_PI * k;
     } else {
-        x = x + 2 * M_PI * -k + 1;
+        x = x + 2 * (M_PI * -k + 1);
     }
     *res = x;
     double cur_num = x;                                   // Текущий член степенного ряда
